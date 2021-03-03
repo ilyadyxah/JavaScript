@@ -1,0 +1,27 @@
+
+.container {
+}
+
+#board {
+    display: grid;
+    grid-template-rows: 40px repeat(8, 80px) 40px;
+    grid-template-columns:40px repeat(8, 80px) 40px;
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid wheat;
+}
+.cell-black {
+    background-color: #81331a;
+    color: wheat;
+}
+
+.cell-white {
+    background-color: #faf2d0;
+}
+
+.cell-transform {
+    transform: rotate(180deg);
+}
