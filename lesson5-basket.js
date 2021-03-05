@@ -74,16 +74,20 @@ function outProducts() {
 }
 
 function outBasket() {
-    divCatalog = document.getElementById('catalog');
+    divBasket = document.getElementById('basket');
     var el = document.createElement('div');
-    el.innerHTML = 'Каталог товаров';
+    el.innerHTML = 'Корзина';
     el.classList.add('product-title');
-    divCatalog.appendChild(el);
-    for (var item in products) {
+    divBasket.appendChild(el);
+    var el = document.createElement('div');
+    el.innerHTML = 'В вашей корзине: ' +sumItems + items + ' на сумму ' + sumPrice + ' $. Из них:';
+    el.classList.add('product-title');
+    divBasket.appendChild(el);
+    for (var i = 0; i < basket.length; i++) {
         var el = document.createElement('div');
-        el.classList.add('product-items');
-        el.innerHTML = products[item].name;
-        divCatalog.appendChild(el);
+        el.innerHTML = (i + 1) + '. ' + basket[i].amount + ' ' + basket[i].productId + ' на сумму ' + products[basket[i].productId].price * basket[i].amount + ' $.';
+        divBasket.appendChild(el);
+        el.classList.add('product-title');
     }
 
 }
