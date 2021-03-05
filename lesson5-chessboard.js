@@ -20,14 +20,14 @@ chessBoard.init = function () {
                 else {
                     el.classList.add('cell','cell-white');
                 }
-                    this.elBoard.appendChild(el);
-                }
+                this.elBoard.appendChild(el);
+            }
             else {
                 if (j === 0 || i === 9) {
                     el.classList.add('cell-transform');
                 }
                 if ((j === 0 || j === 9) && i > 0 && i < 9) {
-                        el.classList.add('cell','cell-black');
+                    el.classList.add('cell','cell-black');
                     switch (i) {
                         case 1:
                             el.innerText = 'A';
@@ -65,10 +65,10 @@ chessBoard.init = function () {
                     el.classList.add('cell', 'cell-black');
                     this.elBoard.appendChild(el);
                 }
-                }
             }
         }
     }
+}
 chessBoard.init();
 
 chessFigure.init = function() {

@@ -19,9 +19,29 @@
 }
 
 .cell-white {
-    background-color: #faf2d0;
+    background-color: #dec99c;
 }
 
 .cell-transform {
     transform: rotate(180deg);
+}
+.cell-filter {
+    -webkit-filter: invert(1);
+}
+
+
+#catalog {
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 40px 70px;
+}
+.product-title {
+    font-size: 24px;
+    grid-column: 1/5;
+}
+
+.product-items {
+    margin-right: 20px;
+    font-size: 18px;
 }
